@@ -4,7 +4,7 @@ import React from 'react'
 const test = () => {
   return (
                   <View>
-      <Text> t est</Text>
+      <Text> t e st</Text>
         </View>
   )
 }
