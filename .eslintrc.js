@@ -26,10 +26,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
     project: ["./tsconfig.json"] ,
-    tsconfigRootDir: __dirname,
   },
   plugins: ["import",'react', 'react-hooks', '@typescript-eslint', 'prettier'],
   rules: {
@@ -42,6 +39,13 @@ module.exports = {
     'react/display-name': 'off',
     'react/prop-types': 'off',
     'prettier/prettier': 'error',
+    "sort-imports": ["error", {
+      "ignoreCase": false,
+      "ignoreDeclarationSort": false,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+      "allowSeparatedGroups": false
+  }]
   },
   settings: {
     react: {
