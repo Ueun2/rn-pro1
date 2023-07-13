@@ -10,11 +10,16 @@
     "test": "jest",
     "format": "prettier --check ./src",
     "prepare": "husky install",
-    "lint-staged":"lint-staged"
+    "lint-staged": "lint-staged",
+    "ios:clean": "cd ios && rm -rf Pods && pod cache clean —all && arch -x86_64 pod install && cd ..",
+    "gradlew": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "aos:clean": "cd android && ./gradlew clean && cd .."
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-native": "0.72.1"
+    "react-native": "0.72.1",
+    "react-native-devsettings": "^1.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
