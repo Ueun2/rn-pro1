@@ -1,17 +1,21 @@
-/**
- * @format
- */
 
-import 'react-native';
-import React from 'react';
-import App from '../App';
+import React from "react";
+import App from "../App";
+import { render } from "@testing-library/react-native";
 
-// Note: import explicitly to use the types shiped with jest.
-import { it } from '@jest/globals';
+let props;
+let component;
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+function getTempComponent(props) {
+  return <App {...props} />;
+}
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+describe("[App] render", () => {
+  props = {}; // fill test props
+  component = getTempComponent(props);
+  test("renders without crashing", () => {
+    const rendered = render(component);
+    expect(rendered).toMatchSnapshot();
+    expect(rendered).toBeTruthy();
+  });
 });
