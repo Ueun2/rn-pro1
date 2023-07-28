@@ -16,6 +16,7 @@ public class ToastPackage implements ReactPackage {
         modules.add(new ToastModule(reactContext));
         return modules;
     }
+
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();

@@ -88,19 +88,64 @@
 
 import React from 'react';
 import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import ToastModule from ‘./Toast.js’;
+import ToastModule from './Toast';
+import AlertModule from './Alert';
+import BrightModule from './Bright';
+import { number } from 'prop-types';
 
 function App() {
+  // const [value, setValue] = useState(-1);
+  // const onPress = async () => {
+  //   const brightness = await getBrightness();
+  //   setValue(brightness);
+  // };
+
+  // const onPressLow = () => {
+  //   setBrightness(0.25);
+  //   DeviceBrightness.setBrightnessLevel(0.25);
+  // };
+  // const onPressHigh = () => {
+  //   setBrightness(1);
+  //   DeviceBrightness.setBrightnessLevel(1);
+  // };
+
   const onPress = () => {
-    ToastModule.show = (“hello”, ToastModule.SHORT);
+    ToastModule.show('Awesome', ToastModule.SHORT);
   };
+  const onPress2 = () => {
+    AlertModule.alert('alert');
+    console.log({
+      string:AlertModule.STRING_VALUE,
+      number:AlertModule.NUMBER_VALUE,
+    });
+  };
+
   return (
-    <SafeAreaView >
-      <Button
-        onPress={onPress}
-        title='버튼'
-      ></Button>
-    </SafeAreaView >
+    <SafeAreaView style={styles.block}>
+      {/* <Button title="Update Brightness" onPress={onPress} />
+      <View style={styles.textWrapper}>
+        <Text style={styles.text}>{value}</Text>
+      </View>
+      <Button title="Low Brightness" onPress={onPressLow} />
+      <Button title="High Brightness" onPress={onPressHigh} /> */}
+      <Button title="click" onPress={onPress} />
+      <Button title="click2" onPress={onPress2} />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  block: {
+    flex: 1,
+  },
+  textWrapper: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+  },
+  text: {
+    fontSize: 64,
+  },
+});
+
 export default App;
