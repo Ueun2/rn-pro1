@@ -1,34 +1,25 @@
 package com.myproject01;
 
 
-import android.view.WindowManager;
+import com.facebook.react.ReactPackage;
+import com.facebook.react.bridge.NativeModule;
+import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.uimanager.ViewManager;
 
-import com.facebook.react.bridge.ReactContextBaseJavaModule;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class BrightPackage extends ReactContextBaseJavaModule {
-
-    private WindowManager.LayoutParams params;
-    private float origin;
-
+public class BrightPackage implements ReactPackage {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_brightness);
-        params = getWindow().getAttributes();
+    public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
+        List<NativeModule> modules = new ArrayList<>();
+        modules.add(new BrightModule(reactContext));
+        return modules;
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        origin = params.screenBrightness;
-        params.screenBrightness = 1.0f;
-        getWindow().setAttributes(params);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        params.screenBrightness = origin;
-        getWindow().setAttributes(params);
+    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
+        return Collections.emptyList();
     }
 }

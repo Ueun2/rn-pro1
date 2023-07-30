@@ -86,7 +86,7 @@
 //   },
 // });
 
-import React from 'react';
+import React ,{useState} from 'react';
 import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import ToastModule from './Toast';
 import AlertModule from './Alert';
@@ -94,20 +94,20 @@ import BrightModule from './Bright';
 import { number } from 'prop-types';
 
 function App() {
-  // const [value, setValue] = useState(-1);
-  // const onPress = async () => {
-  //   const brightness = await getBrightness();
-  //   setValue(brightness);
-  // };
+  const [value, setValue] = useState(-1);
+  const onPress3 = async () => {
+    const brightness = await getBrightness();
+    setValue(brightness);
+  };
 
-  // const onPressLow = () => {
-  //   setBrightness(0.25);
-  //   DeviceBrightness.setBrightnessLevel(0.25);
-  // };
-  // const onPressHigh = () => {
-  //   setBrightness(1);
-  //   DeviceBrightness.setBrightnessLevel(1);
-  // };
+  const onPressLow = () => {
+    setBrightness(0.25);
+    BrightModule.setBrightnessLevel(0.25);
+  };
+  const onPressHigh = () => {
+    setBrightness(1);
+    BrightModule.setBrightnessLevel(1);
+  };
 
   const onPress = () => {
     ToastModule.show('Awesome', ToastModule.SHORT);
@@ -122,12 +122,12 @@ function App() {
 
   return (
     <SafeAreaView style={styles.block}>
-      {/* <Button title="Update Brightness" onPress={onPress} />
+      <Button title="Update Brightness" onPress={onPress3} />
       <View style={styles.textWrapper}>
         <Text style={styles.text}>{value}</Text>
       </View>
       <Button title="Low Brightness" onPress={onPressLow} />
-      <Button title="High Brightness" onPress={onPressHigh} /> */}
+      <Button title="High Brightness" onPress={onPressHigh} />
       <Button title="click" onPress={onPress} />
       <Button title="click2" onPress={onPress2} />
     </SafeAreaView>

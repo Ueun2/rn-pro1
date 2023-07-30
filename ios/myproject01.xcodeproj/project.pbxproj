@@ -16,6 +16,8 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A0F2B1802A6D63D500C75A64 /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F2B17F2A6D63D500C75A64 /* RCTAlertModule.m */; };
 		A0F2B1812A6D63D500C75A64 /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F2B17F2A6D63D500C75A64 /* RCTAlertModule.m */; };
+		A0F2B1842A76355000C75A64 /* RCTBrightModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F2B1832A76355000C75A64 /* RCTBrightModule.m */; };
+		A0F2B1852A76355000C75A64 /* RCTBrightModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F2B1832A76355000C75A64 /* RCTBrightModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-myproject01-myproject01Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myproject01-myproject01Tests.release.xcconfig"; path = "Target Support Files/Pods-myproject01-myproject01Tests/Pods-myproject01-myproject01Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A0F2B17E2A6D632E00C75A64 /* RCTAlertModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTAlertModule.h; sourceTree = "<group>"; };
 		A0F2B17F2A6D63D500C75A64 /* RCTAlertModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTAlertModule.m; sourceTree = "<group>"; };
+		A0F2B1822A76352800C75A64 /* RCTBrightModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBrightModule.h; sourceTree = "<group>"; };
+		A0F2B1832A76355000C75A64 /* RCTBrightModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTBrightModule.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -94,6 +98,8 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				A0F2B17F2A6D63D500C75A64 /* RCTAlertModule.m */,
 				A0F2B17E2A6D632E00C75A64 /* RCTAlertModule.h */,
+				A0F2B1822A76352800C75A64 /* RCTBrightModule.h */,
+				A0F2B1832A76355000C75A64 /* RCTBrightModule.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
@@ -411,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0F2B1812A6D63D500C75A64 /* RCTAlertModule.m in Sources */,
+				A0F2B1852A76355000C75A64 /* RCTBrightModule.m in Sources */,
 				00E356F31AD99517003FC87E /* myproject01Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				A0F2B1842A76355000C75A64 /* RCTBrightModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				A0F2B1802A6D63D500C75A64 /* RCTAlertModule.m in Sources */,
 			);
